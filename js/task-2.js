@@ -3,15 +3,19 @@
 // Кожен об’єкт описує день тижня та кількість калорій calories, спожитих спортсменом, у цей день. 
 
 
-function calcAverageCalories(days){
+function calcAverageCalories(days) {
+  
+  if (days.length === 0) {
+    return 0;
+  }
 
-let total = 0;
+  let total = 0;
 
-for (const day of days) {
-  total += day.calories;
-}
-return total / days.length;
+  for (const day of days) {
+    total += day.calories;
+  }
 
+  return total / days.length;
 }
 
 console.log(
